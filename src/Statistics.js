@@ -3,7 +3,7 @@ class Statistics {
         this.gameResult = [];
     }
 
-    addGameToStatistics(win, bid) {
+    addGameToStats(win, bid) {
         let gameResult = {
             win,
             bid,
@@ -11,11 +11,11 @@ class Statistics {
         this.gameResult.push(gameResult)
     }
 
-    showGameStatistics() {
+    showGameStats() {
         let games = this.gameResult.length;
         let wins = this.gameResult.filter(result => result.win).length
         let losses = this.gameResult.filter(result => !result.win).length
 
-        retunr [games, wins, losses]
+        return [games, wins, losses]
     }
 }
